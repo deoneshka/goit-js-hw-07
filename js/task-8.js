@@ -24,6 +24,8 @@ function randomColor() {
 };
 
 function createBoxes(amount) {
+    destroyBoxes();
+    
     for (let i = 0; i < amount; i += 1) {
         const newBoxRef = document.createElement('div');
         newBoxRef.style.cssText = `width: ${i * 10 + 30}px; height: ${i * 10 + 30}px; background: ${randomColor()}; border: solid 1px`;

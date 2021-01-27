@@ -30,7 +30,7 @@ const galleryListRef = document.querySelector('#gallery');
 
 function createGalleryItemsRef() {
   images.forEach(image => {
-    const galleryItems = galleryListRef.insertAdjacentHTML('afterbegin', `<li><img class='images' src='${image.url}' alt='${image.alt}'></li>`);
+    const galleryItems = galleryListRef.insertAdjacentHTML('beforeend', `<li><img class='images' src='${image.url}' alt='${image.alt}'></li>`);
     return galleryItems;
   });
 
